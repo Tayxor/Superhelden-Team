@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Baloo Chettan 2', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+h1{
+    margin-bottom: 5rem;
+    border: 0 !important;
+    font-size: clamp(2rem, 7.5vmin, 3.2rem);
+    text-align: center;
+}
+
+h2{
+    font-size: clamp(1.3rem, 7.5vmin, 2.4rem);
+}
+
+.inner{
+    max-width: 90rem;
+    width: 100%;
+    padding-inline: clamp(1.5rem, 5vmin, 5rem);
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    margin-inline: auto;
+    transform: scale(0);
+    
+    * {
+        width: 100%;
+        padding-bottom: .5rem;
+        text-align: center;
+
+        &:not(:last-child){
+            border-bottom: 1px solid currentColor;
+        }
+    }
+    
+    // @media screen and (min-width: 70rem) {
+    //     flex-direction: row;
+
+    //     * {
+    //         flex-basis: 33.3%;
+    //         padding: 0;
+    //         border: 0 !important;
+    //     }
+    // }
+}
+
+.refresh--container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-block: 1.5rem;
+    background-color: #548a3e;
+    transform: translate(0);
+    
+    #refresh{
+        font-size: clamp(2.5rem, 7.5vmin, 4rem);
+    }
+}
+
+.refresh--animation #refresh{
+    animation-name: refresh;
+    animation-duration: .3s;
+    animation-direction: forwards;
+}
+
+@keyframes refresh {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+.loading-screen{
+    z-index: 100;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    pointer-events: none;
+    background-color: #000;
+    color: #fff;
+    transition: opacity 3s;
+    transition-delay: 2s;
+
+    .loader{
+        position: absolute;
+        inset: 0;
+        height: 50px;
+        width: 50px;
+        margin: auto;
+        aspect-ratio: 1;
+        border: 2px solid #000;
+        border-top: 2px solid currentColor;
+        border-radius: 50%;
+        transition: opacity .33s;
+    }
+
+    .animation--team{
+        z-index: 110;
+        position: absolute;
+        inset: 0;
+        height: fit-content;
+        max-width: 26rem;
+        width: fit-content;
+        margin: auto;
+        opacity: 0;
+        font-size: clamp(.8rem, 5vmin, 2.5rem);
+        transition: opacity .66s;
+    }
+}
+
+.spin{
+    animation: spin;
+    animation-duration: .75s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}

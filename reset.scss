@@ -1,0 +1,230 @@
+// global ========================================================================
+:where(*, *::before, *::after) {
+	margin: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+
+:where(html) {
+	scroll-behavior: smooth;
+}
+
+:where(html, body) {
+	height: 100%;
+}
+
+:where(body) {
+	font-family: var(--font-family-pri);
+	font-size: 100%;
+	* {
+		line-height: calc(1em + 0.5rem);
+	}
+}
+
+:where(main) {
+	display: block;
+}
+
+// anchors
+:where(a) {
+	text-decoration: none;
+	&:link,
+	&:visited {
+		color: currentColor;
+	}
+
+	&.currentcolor {
+		color: currentColor;
+	}
+}
+
+// lists
+:where(ul, ol, menu) {
+	padding: 0;
+}
+
+:where(menu) {
+	list-style: none;
+}
+
+:where(ul) {
+	list-style: disc;
+}
+
+:where(ol) {
+	list-style: decimal;
+}
+
+:where(ul, ol) {
+	padding-left: 1.5rem;
+	li::marker {
+		color: currentColor;
+	}
+}
+
+:where(li) {
+	list-style: disc;
+}
+
+// media
+:where(img, svg, video, object, iframe, canvas) {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+:where(figure) {
+	> a {
+		display: block;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+// tables
+:where(table) {
+	border-collapse: collapse;
+}
+
+// typo
+:where(q, blockquote) {
+	quotes: '„' '“';
+}
+
+:where(blockquote) {
+	:where(p) {
+		font-size: 1em;
+	}
+}
+
+:where(abbr[title]) {
+	cursor: help;
+	text-decoration: none;
+}
+
+:where(small) {
+	font-size: 80%;
+}
+
+:where(sub, sup) {
+	position: relative;
+	font-size: 80%;
+	line-height: 0;
+	vertical-align: baseline;
+}
+
+:where(sub) {
+	bottom: -0.25em;
+}
+
+:where(sup) {
+	top: -0.5em;
+}
+
+// tags
+:where(hr) {
+	margin: max(#{var(--gap-pri)}, #{var(--flow) / 2}) 0;
+	border: 0;
+	border-top: var(--border-width, #{var(--border-width)}) solid var(--border-color);
+}
+
+// forms
+:where(form) {
+	text-align: left;
+}
+
+:where(fieldset) {
+	padding: 0;
+	border: 0;
+}
+
+:where(label) {
+	position: relative;
+	display: block;
+	margin-bottom: 0.35rem;
+	padding: 0;
+	cursor: pointer;
+	font-weight: normal;
+	:where(em) {
+		font-style: normal;
+	}
+}
+
+:where(input, button, textarea) {
+	font: inherit;
+}
+
+:where(select) {
+	cursor: inherit;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+:where(textarea) {
+	min-height: 10rem;
+	padding: calc(var(--gap-pri) / 2);
+	white-space: revert;
+	resize: vertical;
+}
+
+:where(button) {
+	cursor: pointer;
+	overflow: visible;
+	border: 0;
+	background: none;
+	font: inherit;
+	letter-spacing: inherit;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-font-smoothing: inherit;
+}
+
+// pseudo
+::selection {
+	background: rgba(0, 0, 0, 0.15);
+}
+
+.theme--dark {
+	::selection {
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+}
+
+::placeholder {
+	color: var(--placeholder, --font-pri);
+}
+
+// focus
+::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+:focus {
+	outline: 0;
+}
+
+:focus-visible {
+	border-color: var(--accent-ui);
+}
+
+// create a root stacking context
+#root,
+#__next {
+	isolation: isolate;
+}
+
+// fix the feature of 'hidden' attribute.
+// display:revert; revert to element instead of attribute
+:where([hidden]) {
+	display: none;
+}

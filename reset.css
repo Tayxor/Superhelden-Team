@@ -1,0 +1,235 @@
+@charset "UTF-8";
+:where(*, *::before, *::after) {
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:where(html) {
+  scroll-behavior: smooth;
+}
+
+:where(html, body) {
+  height: 100%;
+}
+
+:where(body) {
+  font-family: var(--font-family-pri);
+  font-size: 100%;
+}
+:where(body) * {
+  line-height: calc(1em + 0.5rem);
+}
+
+:where(main) {
+  display: block;
+}
+
+:where(a) {
+  text-decoration: none;
+}
+:where(a):link, :where(a):visited {
+  color: currentColor;
+}
+:where(a).currentcolor {
+  color: currentColor;
+}
+
+:where(ul, ol, menu) {
+  padding: 0;
+}
+
+:where(menu) {
+  list-style: none;
+}
+
+:where(ul) {
+  list-style: disc;
+}
+
+:where(ol) {
+  list-style: decimal;
+}
+
+:where(ul, ol) {
+  padding-left: 1.5rem;
+}
+:where(ul, ol) li::marker {
+  color: currentColor;
+}
+
+:where(li) {
+  list-style: disc;
+}
+
+:where(img, svg, video, object, iframe, canvas) {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+:where(figure) > a {
+  display: block;
+}
+:where(figure) img {
+  width: 100%;
+}
+
+:where(table) {
+  border-collapse: collapse;
+}
+
+:where(q, blockquote) {
+  quotes: "„" "“";
+}
+
+:where(blockquote) :where(p) {
+  font-size: 1em;
+}
+
+:where(abbr[title]) {
+  cursor: help;
+  text-decoration: none;
+}
+
+:where(small) {
+  font-size: 80%;
+}
+
+:where(sub, sup) {
+  position: relative;
+  font-size: 80%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+:where(sub) {
+  bottom: -0.25em;
+}
+
+:where(sup) {
+  top: -0.5em;
+}
+
+:where(hr) {
+  margin: max(var(--gap-pri), var(--flow)/2) 0;
+  border: 0;
+  border-top: var(--border-width, var(--border-width)) solid var(--border-color);
+}
+
+:where(form) {
+  text-align: left;
+}
+
+:where(fieldset) {
+  padding: 0;
+  border: 0;
+}
+
+:where(label) {
+  position: relative;
+  display: block;
+  margin-bottom: 0.35rem;
+  padding: 0;
+  cursor: pointer;
+  font-weight: normal;
+}
+:where(label) :where(em) {
+  font-style: normal;
+}
+
+:where(input, button, textarea) {
+  font: inherit;
+}
+
+:where(select) {
+  cursor: inherit;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+:where(select)::-ms-expand {
+  display: none;
+}
+
+:where(textarea) {
+  min-height: 10rem;
+  padding: calc(var(--gap-pri) / 2);
+  white-space: revert;
+  resize: vertical;
+}
+
+:where(button) {
+  cursor: pointer;
+  overflow: visible;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-font-smoothing: inherit;
+}
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.theme--dark ::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.theme--dark ::selection {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-input-placeholder {
+  color: var(--placeholder, --font-pri);
+}
+
+::-moz-placeholder {
+  color: var(--placeholder, --font-pri);
+}
+
+:-ms-input-placeholder {
+  color: var(--placeholder, --font-pri);
+}
+
+::-ms-input-placeholder {
+  color: var(--placeholder, --font-pri);
+}
+
+::placeholder {
+  color: var(--placeholder, --font-pri);
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+:focus-visible {
+  border-color: var(--accent-ui);
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:where([hidden]) {
+  display: none;
+}
