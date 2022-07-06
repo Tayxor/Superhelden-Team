@@ -84,21 +84,21 @@ window.onload = function(){
                                 
                                 const randomNumber = generateRandomInteger(0,7)
                                 if(randomNumber == 0){
-                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + generateRandomInteger(-100, 100) + 'vw'  + ', ' + '100' + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
+                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + generateRandomInteger(-100, 100) + 'vw'  + ', ' + '110' + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
                                 }else if(randomNumber == 1){
-                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + generateRandomInteger(100, -100) + 'vw' + ', ' + '100' + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
+                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + generateRandomInteger(100, -100) + 'vw' + ', ' + '110' + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
                                 }else if(randomNumber == 2){
-                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + '100' + 'vw' + ', ' + generateRandomInteger(100, -100) + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
+                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + '110' + 'vw' + ', ' + generateRandomInteger(100, -100) + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
                                 }else if(randomNumber == 3){
-                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + '100' + 'vw' + ', ' + generateRandomInteger(-100, 100) + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
+                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + '110' + 'vw' + ', ' + generateRandomInteger(-100, 100) + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
                                 }else if(randomNumber == 4){
-                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + generateRandomInteger(-100, 100) + 'vw'  + ', ' + '-100' + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
+                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + generateRandomInteger(-100, 100) + 'vw'  + ', ' + '-110' + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
                                 }else if(randomNumber == 5){
-                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + generateRandomInteger(100, -100) + 'vw' + ', ' + '-100' + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
+                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + generateRandomInteger(100, -100) + 'vw' + ', ' + '-110' + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
                                 }else if(randomNumber == 6){
-                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + '-100' + 'vw' + ', ' + generateRandomInteger(100, -100) + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
+                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + '-110' + 'vw' + ', ' + generateRandomInteger(100, -100) + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
                                 }else if(randomNumber == 7){
-                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + '-100' + 'vw' + ', ' + generateRandomInteger(-100, 100) + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
+                                    document.getElementById('animation--team-' + i).style.transform = 'translate(' + '-110' + 'vw' + ', ' + generateRandomInteger(-100, 100) + 'vh' + ')' + ' scale(' + generateRandomInteger(8, 15) / 10 + ')';
                                 }
 
                                 document.getElementById('loading-screen').style.opacity = 0;
