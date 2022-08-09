@@ -54,14 +54,14 @@ window.onload = function(){
         readTextFile(file, function(text){
             var data = JSON.parse(text);
             const member = data.messages[Math.floor(Math.random()*data.messages.length)].content            
-            console.log(file.replace('.json', '') + ' ' + data.messageCount)
+            // console.log(file.replace('.json', '') + ' ' + data.messageCount)
             
             if (member.length > 0){
                 for (let i = 0; i < 5; i++) {
                     animationTeam.push(data.messages[Math.floor(Math.random()*data.messages.length)].content)                    
                 }
 
-                document.querySelector('#' + file.replace('.json', '')).innerHTML = member
+                document.querySelector('#' + file.replace('.json', '')).innerHTML = member  + ' (' + data.messageCount + ')'
             } else{
                 renderTeam()
             }
